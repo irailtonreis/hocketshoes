@@ -2,8 +2,10 @@
   "name": "rocketshoes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://irailtonreis.github.io/rocketshoes",
   "dependencies": {
     "axios": "^0.19.0",
+    "gh-pages": "^2.1.1",
     "global": "^4.4.0",
     "history": "^4.10.1",
     "immer": "^5.0.0",
@@ -28,6 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^2.3.0"
   }
 }

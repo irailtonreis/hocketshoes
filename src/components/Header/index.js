@@ -1,12 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 
 import { Container, Cart } from './styles';
 import Logo from '../../assets/images/logo.png';
 
- function Header({ cartSize }) {
+export default function Header() {
+   const cartSize = useSelector(state => state.cart.length);
    
   return (
     <Container>
@@ -24,6 +25,3 @@ import Logo from '../../assets/images/logo.png';
     );
 }
 
-export default connect(state => ({
-  cartSize: state.cart.length,
-}))(Header);
